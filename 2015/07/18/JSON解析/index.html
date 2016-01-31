@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>JSON 解析 | Saisimon&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JSON (JavaScript Object Notation) – 一种轻量级的数据交换格式JSON 的特点是纯文本，易于人理解和编写，并且机器也易于解析和生成。比 XML（可扩展标记语言）更小、更快，更易解析。
+JSON 语法规则
+数据在名称/值对中
+数据由逗号分隔
+花括号保存对象
+方括号保存数组
+
+JSON 对象对象是一个无序的“‘名称/值’对”集合。一个对象以“{”（左括号）开始，“}”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSON 解析">
+<meta property="og:url" content="http://blog.saisimon.net/2015/07/18/JSON解析/index.html">
+<meta property="og:site_name" content="Saisimon's Blog">
+<meta property="og:description" content="JSON (JavaScript Object Notation) – 一种轻量级的数据交换格式JSON 的特点是纯文本，易于人理解和编写，并且机器也易于解析和生成。比 XML（可扩展标记语言）更小、更快，更易解析。
+JSON 语法规则
+数据在名称/值对中
+数据由逗号分隔
+花括号保存对象
+方括号保存数组
+
+JSON 对象对象是一个无序的“‘名称/值’对”集合。一个对象以“{”（左括号）开始，“}”">
+<meta property="og:image" content="http://i3.tietuku.com/176d51e21167516e.gif">
+<meta property="og:updated_time" content="2016-01-25T15:10:35.801Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSON 解析">
+<meta name="twitter:description" content="JSON (JavaScript Object Notation) – 一种轻量级的数据交换格式JSON 的特点是纯文本，易于人理解和编写，并且机器也易于解析和生成。比 XML（可扩展标记语言）更小、更快，更易解析。
+JSON 语法规则
+数据在名称/值对中
+数据由逗号分隔
+花括号保存对象
+方括号保存数组
+
+JSON 对象对象是一个无序的“‘名称/值’对”集合。一个对象以“{”（左括号）开始，“}”">
+  
+    <link rel="alternative" href="/atom.xml" title="Saisimon&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://i1.tietuku.com/6082bc717ffed9bd.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Saisimon</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>標籤</li>
+						
+						
+						<li>關於</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Saisimon" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/Saisimon" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/saisimon" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/DWR/" style="font-size: 10px;">DWR</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/ManyToOne/" style="font-size: 10px;">ManyToOne</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/OneToMany/" style="font-size: 10px;">OneToMany</a> <a href="/tags/SessionFactory/" style="font-size: 10px;">SessionFactory</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/应用/" style="font-size: 10px;">应用</a> <a href="/tags/解析/" style="font-size: 10px;">解析</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">SteamID:simonzs,PSN:Sai_zs93</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Saisimon</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://i1.tietuku.com/6082bc717ffed9bd.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Saisimon</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Saisimon" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/Saisimon" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/saisimon" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-JSON解析" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/18/JSON解析/" class="article-date">
+  	<time datetime="2015-07-18T14:57:00.000Z" itemprop="datePublished">2015-07-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JSON 解析
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSON/">JSON</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解析/">解析</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/JSON/">JSON</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://i3.tietuku.com/176d51e21167516e.gif" alt="image"></p>
+<h1 id="JSON__28JavaScript_Object_Notation_29__u2013__u4E00_u79CD_u8F7B_u91CF_u7EA7_u7684_u6570_u636E_u4EA4_u6362_u683C_u5F0F"><a href="#JSON__28JavaScript_Object_Notation_29__u2013__u4E00_u79CD_u8F7B_u91CF_u7EA7_u7684_u6570_u636E_u4EA4_u6362_u683C_u5F0F" class="headerlink" title="JSON (JavaScript Object Notation) – 一种轻量级的数据交换格式"></a>JSON (JavaScript Object Notation) – 一种轻量级的数据交换格式</h1><p>JSON 的特点是纯文本，易于人理解和编写，并且机器也易于解析和生成。比 XML（可扩展标记语言）更小、更快，更易解析。</p>
+<h2 id="JSON__u8BED_u6CD5_u89C4_u5219"><a href="#JSON__u8BED_u6CD5_u89C4_u5219" class="headerlink" title="JSON 语法规则"></a>JSON 语法规则</h2><ul>
+<li>数据在名称/值对中</li>
+<li>数据由逗号分隔</li>
+<li>花括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
+<h2 id="JSON__u5BF9_u8C61"><a href="#JSON__u5BF9_u8C61" class="headerlink" title="JSON 对象"></a>JSON 对象</h2><p>对象是一个无序的“‘名称/值’对”集合。一个对象以“{”（左括号）开始，“}”（右括号）结束。每个“名称”后跟一个“:”（冒号）；“‘名称/值’ 对”之间使用“,”（逗号）分隔。<br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; "<span class="attribute">firstName</span>":<span class="value"><span class="string">"John"</span> </span>, "<span class="attribute">lastName</span>":<span class="value"><span class="string">"Doe"</span> </span>&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="JSON__u6570_u7EC4"><a href="#JSON__u6570_u7EC4" class="headerlink" title="JSON 数组"></a>JSON 数组</h2><p>数组是值（value）的有序集合。一个数组以“[”（左中括号）开始，“]”（右中括号）结束。值之间使用“,”（逗号）分隔。<br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">employees</span>": <span class="value">[</span><br><span class="line">		&#123; "<span class="attribute">firstName</span>":<span class="value"><span class="string">"John"</span> </span>, "<span class="attribute">lastName</span>":<span class="value"><span class="string">"Doe"</span> </span>&#125;,</span><br><span class="line">		&#123; "<span class="attribute">firstName</span>":<span class="value"><span class="string">"Anna"</span> </span>, "<span class="attribute">lastName</span>":<span class="value"><span class="string">"Smith"</span> </span>&#125;,</span><br><span class="line">		&#123; "<span class="attribute">firstName</span>":<span class="value"><span class="string">"Peter"</span> </span>, "<span class="attribute">lastName</span>":<span class="value"><span class="string">"Jones"</span> </span>&#125;</span><br><span class="line">	]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="JSON__u89E3_u6790"><a href="#JSON__u89E3_u6790" class="headerlink" title="JSON 解析"></a>JSON 解析</h2><p>在 Java 中对 JSON 进行解析的封装有很多，例如 org.json , json-lib 等众多工具。</p>
+<h3 id="org-json"><a href="#org-json" class="headerlink" title="org.json"></a>org.json</h3><p><a href="https://github.com/douglascrockford/JSON-java" target="_blank" rel="external">源码下载</a><br><a href="http://www.json.org/javadoc/org/json/package-summary.html" target="_blank" rel="external">文档下载</a></p>
+<ul>
+<li><p>JSONObject 类<br>通过 JSONObject 类的构造方法，可以将 String 类型的 JSON 文本转为一个 JSONObject 类对象，如果 JSON 不是一个 JSONObject 对象，报 JSONException 异常。JSONObejct 类提供了很多种方法对该对象进行操作。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		String json = <span class="string">"&#123; 'employees': &#123; 'firstName':'John' , 'lastName':'Doe' &#125;&#125;"</span>;</span><br><span class="line">		JSONObject jsonObj = <span class="keyword">new</span> JSONObject(json);</span><br><span class="line">		JSONObject childJSONObj = jsonObj.getJSONObject(<span class="string">"employees"</span>);</span><br><span class="line">		System.out.println(childJSONObj.getString(<span class="string">"firstName"</span>)); <span class="comment">//John</span></span><br><span class="line">		childJSONObj.put(<span class="string">"age"</span>, <span class="number">18</span>);</span><br><span class="line">		System.out.println(childJSONObj.toString()); <span class="comment">//&#123;"firstName":"John","lastName":"Doe","age":18&#125;</span></span><br><span class="line">		System.out.println(childJSONObj.length()); <span class="comment">//3</span></span><br><span class="line">		System.out.println(childJSONObj.has(<span class="string">"age"</span>)); <span class="comment">//true</span></span><br><span class="line">		Iterator it = childJSONObj.keys();</span><br><span class="line">		<span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">			Object o = it.next();</span><br><span class="line">			System.out.print(o.toString() + <span class="string">" "</span>); <span class="comment">//firstName lastName age </span></span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		childJSONObj.remove(<span class="string">"age"</span>);</span><br><span class="line">		System.out.println(childJSONObj.length()); <span class="comment">//2</span></span><br><span class="line">		System.out.println(childJSONObj.has(<span class="string">"age"</span>)); <span class="comment">//false</span></span><br><span class="line">		childJSONObj.put(<span class="string">"firstName"</span>, <span class="keyword">new</span> String(<span class="string">"Bob"</span>));</span><br><span class="line">		System.out.println(childJSONObj.toString()); <span class="comment">//&#123;"firstName":"Bob","lastName":"Doe"&#125;</span></span><br><span class="line">		System.out.println(childJSONObj.isNull(<span class="string">"birthday"</span>)); <span class="comment">//true</span></span><br><span class="line">	&#125; <span class="keyword">catch</span> (JSONException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>JSONObject 类中分别有两种方法得到 JSON 文本中的值，getXXX(String key) 与 optXXX(String key)。两者的区别在于通过 getXXX 方法取值时，如果键不存在，就会报 JSONException 异常。而通过 optXXX 方法取值时，如果键不存在，会返回空值。该方法还提供了 optXXX(String key,String defaultValue) 方法。如果键不存在，就会返回默认值。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		String json = <span class="string">"&#123; 'employees': &#123; 'firstName':'John' , 'lastName':'Doe' , 'age':18 &#125;&#125;"</span>;</span><br><span class="line">		JSONObject jsonObj = <span class="keyword">new</span> JSONObject(json);</span><br><span class="line">		JSONObject childJSONObj = jsonObj.getJSONObject(<span class="string">"employees"</span>);</span><br><span class="line">		System.out.println(childJSONObj.optString(<span class="string">"age"</span>)); <span class="comment">//18</span></span><br><span class="line">		System.out.println(childJSONObj.optString(<span class="string">"age"</span>, <span class="string">"20"</span>)); <span class="comment">//18</span></span><br><span class="line">		System.out.println(childJSONObj.optString(<span class="string">"birthday"</span>)); <span class="comment">//</span></span><br><span class="line">		System.out.println(childJSONObj.optString(<span class="string">"birthday"</span>, <span class="string">"1979-01-01"</span>)); <span class="comment">//1979-01-01</span></span><br><span class="line">		System.out.println(childJSONObj.getString(<span class="string">"age"</span>)); <span class="comment">//18</span></span><br><span class="line">		System.out.println(childJSONObj.getString(<span class="string">"birthday"</span>)); <span class="comment">//org.json.JSONException: JSONObject["birthday"] not found.</span></span><br><span class="line">	&#125; <span class="keyword">catch</span> (JSONException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSONArray 类<br>通过 JSONArray 类的构造方法，可以将 String 类型的 JSON 文本转为一个 JSONArray 类对象，如果 JSON 不是一个 JSONArray 对象，报 JSONException 异常。JSONArray 类也提供了很多种方法对该对象进行操作，其中大部分方法和 JSONObejct 类提供方法相似。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		String json = <span class="string">"[&#123;'firstName':'John','lastName':'Doe'&#125;,&#123;'firstName':'Anna','lastName':'Smith'&#125;,&#123;'firstName':'Peter','lastName':'Jones'&#125;]"</span>;</span><br><span class="line">		JSONArray jsonArray = <span class="keyword">new</span> JSONArray(json);</span><br><span class="line">		System.out.println(jsonArray.length()); <span class="comment">//3</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; jsonArray.length(); i++) &#123;</span><br><span class="line">			System.out.print(jsonArray.get(i) + <span class="string">" "</span>); <span class="comment">//&#123;"firstName":"John","lastName":"Doe"&#125; &#123;"firstName":"Anna","lastName":"Smith"&#125; &#123;"firstName":"Peter","lastName":"Jones"&#125; </span></span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">	&#125; <span class="keyword">catch</span> (JSONException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSONStringer 类<br>JSONStringer 类提供了一个快捷和方便的构造JSON文本的方法。<br>JSONStringer 的 object() 方法表示JSON文本是以一个对象开始。key() 方法表示添加一个键，value() 方法表示添加一个键对应的值。endObject() 方法表示对象的结束。对应的 Array() 与 endArray() 方法表示数组的开始与结束。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		JSONStringer jsonStr = <span class="keyword">new</span> JSONStringer();</span><br><span class="line">		JSONObject jsonObj = <span class="keyword">new</span> JSONObject();</span><br><span class="line">		JSONObject jsonHeader = <span class="keyword">new</span> JSONObject();</span><br><span class="line">		jsonHeader.put(<span class="string">"userid"</span>, <span class="string">"0001"</span>);</span><br><span class="line">		JSONObject jsonBody = <span class="keyword">new</span> JSONObject();</span><br><span class="line">		jsonBody.put(<span class="string">"username"</span>, <span class="string">"simon"</span>);</span><br><span class="line">		jsonBody.put(<span class="string">"age"</span>, <span class="number">20</span>);</span><br><span class="line">		jsonObj.put(<span class="string">"header"</span>, jsonHeader);</span><br><span class="line">		jsonObj.put(<span class="string">"body"</span>, jsonBody);</span><br><span class="line">		System.out.println(jsonStr.object().key(<span class="string">"root"</span>).value(jsonObj).endObject().toString()); <span class="comment">//&#123;"root":&#123;"header":&#123;"userid":"0001"&#125;,"body":&#123;"age":20,"username":"simon"&#125;&#125;&#125;</span></span><br><span class="line">	&#125; <span class="keyword">catch</span> (JSONException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSONTokener 类<br>与 JSONStringer 类对应的就是 JSONTokener 类，该类用于读取JSON格式的文件。<br>从文件中读取一个JSONObject;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">JSONObject obj = <span class="keyword">new</span> JSONObject( <span class="keyword">new</span> JSONTokener(java.io.Reader));</span><br></pre></td></tr></table></figure>
+<p>从文件中读取一个JSONArray;</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">JSONArray obj = <span class="keyword">new</span> JSONArray( <span class="keyword">new</span> JSONTokener(java.io.Reader));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="json-lib"><a href="#json-lib" class="headerlink" title="json-lib"></a>json-lib</h3><p><a href="http://sourceforge.net/projects/json-lib/files/json-lib/json-lib-2.4/" target="_blank" rel="external">jar包与源码下载</a><br>注意:使用json-lib需要的依赖包</p>
+<ol>
+<li>commons-lang <a href="http://commons.apache.org/lang/download_lang.cgi" target="_blank" rel="external">下载</a></li>
+<li>commons-beanutils <a href="http://commons.apache.org/proper/commons-beanutils/download_beanutils.cgi" target="_blank" rel="external">下载</a></li>
+<li>commons-collections <a href="http://commons.apache.org/proper/commons-collections/download_collections.cgi" target="_blank" rel="external">下载</a></li>
+<li>commons-logging <a href="http://commons.apache.org/proper/commons-logging/download_logging.cgi" target="_blank" rel="external">下载</a></li>
+<li>ezmorph <a href="http://sourceforge.net/projects/ezmorph/" target="_blank" rel="external">下载</a></li>
+</ol>
+<p>建议使用 Maven 对项目进行管理,免去到处下载依赖包的麻烦。参见 <a href="http://blog.saisimon.net/2015/07/12/maven/">Maven 入门</a></p>
+<p>json-lib 与 org.json 在JSON文本解析时略有不同，json-lib 使用 JSONObject 类中的静态方法 formObject(Object object) 得到 JSONObject 对象。JSONObject 类中封装了常用的一些方法。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	String json = <span class="string">"&#123; 'employees': &#123; 'firstName':'John' , 'lastName':'Doe' &#125;&#125;"</span>;</span><br><span class="line">	JSONObject jsonObj = JSONObject.fromObject(json);</span><br><span class="line">	JSONObject childJSONObj = jsonObj.getJSONObject(<span class="string">"employees"</span>);</span><br><span class="line">	System.out.println(childJSONObj.names());<span class="comment">//["firstName","lastName"]</span></span><br><span class="line">	Iterator it = childJSONObj.keys();</span><br><span class="line">	<span class="keyword">while</span>(it.hasNext()) &#123;</span><br><span class="line">		Object obj = it.next();</span><br><span class="line">		System.out.print(obj + <span class="string">"="</span> + childJSONObj.get(obj) + <span class="string">" "</span>); <span class="comment">//firstName=John lastName=Doe </span></span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其他大部分的封装都与 org.json 中的差不太多，这里就不一一赘述了。</p>
+<h2 id="u53C2_u8003_u8D44_u6599"><a href="#u53C2_u8003_u8D44_u6599" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://www.w3school.com.cn/json/" target="_blank" rel="external">JSON 教程</a></li>
+<li><a href="http://www.json.org/json-zh.html" target="_blank" rel="external">介绍 JSON</a></li>
+<li><a href="http://www.json.org/javadoc/org/json/package-summary.html" target="_blank" rel="external">org.json文档</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/25/DWR/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          DWR(Direct Web Remoting)应用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/12/maven/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Maven入门</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JSON解析" data-title="JSON 解析" data-url="http://blog.saisimon.net/2015/07/18/JSON解析/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Saisimon
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

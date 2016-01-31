@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Hibernate中的SessionFactory | Saisimon&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="SessionFactory – 用来产生和管理Session的工厂类通常情况下，每个应用只需要一个SessionFactory对象，可以使用单例模式来产生SessionFactory对象。
+SessionFactory的openSession()和getCurrentSession()方法的区别获得sessionFactory:SessionFactory sessionFactory = nu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hibernate中的SessionFactory">
+<meta property="og:url" content="http://blog.saisimon.net/2015/07/07/Hibernate中的SessionFactory/index.html">
+<meta property="og:site_name" content="Saisimon's Blog">
+<meta property="og:description" content="SessionFactory – 用来产生和管理Session的工厂类通常情况下，每个应用只需要一个SessionFactory对象，可以使用单例模式来产生SessionFactory对象。
+SessionFactory的openSession()和getCurrentSession()方法的区别获得sessionFactory:SessionFactory sessionFactory = nu">
+<meta property="og:image" content="http://i3.tietuku.com/f4fb80b6f5a3986d.png">
+<meta property="og:updated_time" content="2015-07-19T15:43:09.556Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hibernate中的SessionFactory">
+<meta name="twitter:description" content="SessionFactory – 用来产生和管理Session的工厂类通常情况下，每个应用只需要一个SessionFactory对象，可以使用单例模式来产生SessionFactory对象。
+SessionFactory的openSession()和getCurrentSession()方法的区别获得sessionFactory:SessionFactory sessionFactory = nu">
+  
+    <link rel="alternative" href="/atom.xml" title="Saisimon&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://i1.tietuku.com/6082bc717ffed9bd.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Saisimon</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>標籤</li>
+						
+						
+						<li>關於</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Saisimon" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/Saisimon" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/saisimon" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/DWR/" style="font-size: 10px;">DWR</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/ManyToOne/" style="font-size: 10px;">ManyToOne</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/OneToMany/" style="font-size: 10px;">OneToMany</a> <a href="/tags/SessionFactory/" style="font-size: 10px;">SessionFactory</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/应用/" style="font-size: 10px;">应用</a> <a href="/tags/解析/" style="font-size: 10px;">解析</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">SteamID:simonzs,PSN:Sai_zs93</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Saisimon</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://i1.tietuku.com/6082bc717ffed9bd.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Saisimon</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Saisimon" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/Saisimon" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/saisimon" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Hibernate中的SessionFactory" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/07/Hibernate中的SessionFactory/" class="article-date">
+  	<time datetime="2015-07-07T10:03:34.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hibernate中的SessionFactory
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hibernate/">Hibernate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SessionFactory/">SessionFactory</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Hibernate/">Hibernate</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://i3.tietuku.com/f4fb80b6f5a3986d.png" alt="image"></p>
+<h1 id="SessionFactory__u2013__u7528_u6765_u4EA7_u751F_u548C_u7BA1_u7406Session_u7684_u5DE5_u5382_u7C7B"><a href="#SessionFactory__u2013__u7528_u6765_u4EA7_u751F_u548C_u7BA1_u7406Session_u7684_u5DE5_u5382_u7C7B" class="headerlink" title="SessionFactory – 用来产生和管理Session的工厂类"></a>SessionFactory – 用来产生和管理Session的工厂类</h1><p>通常情况下，每个应用只需要一个SessionFactory对象，可以使用单例模式来产生SessionFactory对象。</p>
+<h2 id="SessionFactory_u7684openSession_28_29_u548CgetCurrentSession_28_29_u65B9_u6CD5_u7684_u533A_u522B"><a href="#SessionFactory_u7684openSession_28_29_u548CgetCurrentSession_28_29_u65B9_u6CD5_u7684_u533A_u522B" class="headerlink" title="SessionFactory的openSession()和getCurrentSession()方法的区别"></a>SessionFactory的openSession()和getCurrentSession()方法的区别</h2><p>获得sessionFactory:<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">SessionFactory sessionFactory = <span class="keyword">null</span>;</span><br><span class="line">Configuration cfg = <span class="keyword">new</span> Configuration().configure();</span><br><span class="line">sessionFactory = cfg.buildSessionFactory(<span class="keyword">new</span> StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build());</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>通过openSession()方法获得session:<br>​每次调用openSession()方法，都会产生新的Session对象。并且需要close()操作。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Session session = sessionFactory.openSession();</span><br><span class="line">Session session2 = sessionFactory.openSession();</span><br><span class="line">System.out.println(session == session2); <span class="comment">//false</span></span><br></pre></td></tr></table></figure></p>
+<p>​​通过getCurrentSession()方法获得session:<br>在Session对象commit之前，每次调用getCurrentSession()方法，都会产生同一个Session对象。<br>Session对象commit之后,自动关闭，调用getCurrentSession()方法，会产生新的Session对象。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Session session = sessionFactory.getCurrentSession();</span><br><span class="line">Session session2 = sessionFactory.getCurrentSession();</span><br><span class="line">session.beginTransaction();</span><br><span class="line">session.save(object);</span><br><span class="line">session.getTransaction().commit();</span><br><span class="line">Session session3 = sessionFactory.getCurrentSession();</span><br><span class="line">System.out.println(session == session2);<span class="comment">//true</span></span><br><span class="line">System.out.println(session == session3);<span class="comment">//false</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/12/maven/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Maven入门
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/07/Hibernate中1-N问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hibernate中1+N问题</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Hibernate中的SessionFactory" data-title="Hibernate中的SessionFactory" data-url="http://blog.saisimon.net/2015/07/07/Hibernate中的SessionFactory/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Saisimon
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
