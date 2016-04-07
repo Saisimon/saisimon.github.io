@@ -32,7 +32,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="http://i1.tietuku.com/6082bc717ffed9bd.jpg" class="js-avatar">
+			<img lazy-src="http://ww1.sinaimg.cn/large/7c2c72d3gw1f2ojznhf9tj205k05kmy7.jpg" class="js-avatar">
 			
 		</a>
 
@@ -67,10 +67,10 @@
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
 						<li>菜单</li>
-						<li>標籤</li>
+						<li>Tags</li>
 						
 						
-						<li>關於</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/DWR/" style="font-size: 10px;">DWR</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/ManyToOne/" style="font-size: 10px;">ManyToOne</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/OneToMany/" style="font-size: 10px;">OneToMany</a> <a href="/tags/SessionFactory/" style="font-size: 10px;">SessionFactory</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/应用/" style="font-size: 10px;">应用</a> <a href="/tags/解析/" style="font-size: 10px;">解析</a>
+						<a href="/tags/DWR/" style="font-size: 10px;">DWR</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/ManyToOne/" style="font-size: 10px;">ManyToOne</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/OneToMany/" style="font-size: 10px;">OneToMany</a> <a href="/tags/Quartz/" style="font-size: 10px;">Quartz</a> <a href="/tags/SessionFactory/" style="font-size: 10px;">SessionFactory</a> <a href="/tags/cron/" style="font-size: 10px;">cron</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/应用/" style="font-size: 10px;">应用</a> <a href="/tags/解析/" style="font-size: 10px;">解析</a>
 					</div>
 				</section>
 				
@@ -135,7 +135,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="http://i1.tietuku.com/6082bc717ffed9bd.jpg" class="js-avatar">
+				<img lazy-src="http://ww1.sinaimg.cn/large/7c2c72d3gw1f2ojznhf9tj205k05kmy7.jpg" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -168,6 +168,78 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Quartz应用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/07/Quartz应用/" class="article-date">
+  	<time datetime="2016-04-07T01:44:40.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/Quartz应用/">Quartz应用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://ww3.sinaimg.cn/mw690/7c2c72d3gw1f2nwd1uzm5j20uk07sab5.jpg" alt="image"></p>
+<h1 id="Quartz__u2013__u4E00_u4E2A_u5B8C_u5168_u7531_java__u7F16_u5199_u7684_u5F00_u6E90_u4F5C_u4E1A_u8C03_u5EA6_u6846_u67B6"><a href="#Quartz__u2013__u4E00_u4E2A_u5B8C_u5168_u7531_java__u7F16_u5199_u7684_u5F00_u6E90_u4F5C_u4E1A_u8C03_u5EA6_u6846_u67B6" class="headerlink" title="Quartz – 一个完全由 java 编写的开源作业调度框架"></a>Quartz – 一个完全由 java 编写的开源作业调度框架</h1><p>Quartz 是一个 Java 下作业控制的开源框架。Quartz 用来创建或简单或复杂的调度时间表，执行 Java 下任意数量的作业，Quartz 还支持集群。</p>
+<blockquote>
+<ul>
+<li>Quartz 官方下载地址：<a href="http://www.quartz-scheduler.org/downloads/">Quartz Download</a></li>
+<li>Quartz Maven：<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">groupId</span>&gt;</span>org.quartz-scheduler<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>quartz<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">version</span>&gt;</span>2.2.2<span class="tag">&lt;/<span class="title">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">dependency</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Quartz/">Quartz</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cron/">cron</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/07/Quartz应用/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-DWR" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -275,7 +347,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://i3.tietuku.com/176d51e21167516e.gif" alt="image"></p>
+        <p><img src="http://ww1.sinaimg.cn/mw690/7c2c72d3gw1f2ojpvulfkj20dg073gm0.jpg" alt="image"></p>
 <h1 id="JSON__28JavaScript_Object_Notation_29__u2013__u4E00_u79CD_u8F7B_u91CF_u7EA7_u7684_u6570_u636E_u4EA4_u6362_u683C_u5F0F"><a href="#JSON__28JavaScript_Object_Notation_29__u2013__u4E00_u79CD_u8F7B_u91CF_u7EA7_u7684_u6570_u636E_u4EA4_u6362_u683C_u5F0F" class="headerlink" title="JSON (JavaScript Object Notation) – 一种轻量级的数据交换格式"></a>JSON (JavaScript Object Notation) – 一种轻量级的数据交换格式</h1><p>JSON 的特点是纯文本，易于人理解和编写，并且机器也易于解析和生成。比 XML（可扩展标记语言）更小、更快，更易解析。</p>
 <h2 id="JSON__u8BED_u6CD5_u89C4_u5219"><a href="#JSON__u8BED_u6CD5_u89C4_u5219" class="headerlink" title="JSON 语法规则"></a>JSON 语法规则</h2><ul>
 <li>数据在名称/值对中</li>
@@ -347,7 +419,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://i3.tietuku.com/4d51fa60cd025ee8.png" alt="image"></p>
+        <p><img src="http://ww1.sinaimg.cn/mw690/7c2c72d3gw1f2ojrxkq99j209g02eaa4.jpg" alt="image"></p>
 <h1 id="Maven__u2013__u57FA_u4E8E_u9879_u76EE_u5BF9_u8C61_u6A21_u578B_28POM_29_uFF0C_u53EF_u4EE5_u901A_u8FC7_u4E00_u5C0F_u6BB5_u63CF_u8FF0_u4FE1_u606F_u6765_u7BA1_u7406_u9879_u76EE_u7684_u6784_u5EFA_uFF0C_u62A5_u544A_u548C_u6587_u6863_u7684_u8F6F_u4EF6_u9879_u76EE_u7BA1_u7406_u5DE5_u5177"><a href="#Maven__u2013__u57FA_u4E8E_u9879_u76EE_u5BF9_u8C61_u6A21_u578B_28POM_29_uFF0C_u53EF_u4EE5_u901A_u8FC7_u4E00_u5C0F_u6BB5_u63CF_u8FF0_u4FE1_u606F_u6765_u7BA1_u7406_u9879_u76EE_u7684_u6784_u5EFA_uFF0C_u62A5_u544A_u548C_u6587_u6863_u7684_u8F6F_u4EF6_u9879_u76EE_u7BA1_u7406_u5DE5_u5177" class="headerlink" title="Maven – 基于项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具"></a>Maven – 基于项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具</h1><p>Maven下载地址：<a href="http://maven.apache.org/download.cgi">Maven</a></p>
 <h2 id="Maven_u914D_u7F6E_u73AF_u5883_u53D8_u91CF"><a href="#Maven_u914D_u7F6E_u73AF_u5883_u53D8_u91CF" class="headerlink" title="Maven配置环境变量"></a>Maven配置环境变量</h2><ol>
 <li>在环境变量-系统变量中添加 MAVEN_HOME 变量，值为 Maven 解压之后的路径</li>
@@ -419,7 +491,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://i3.tietuku.com/f4fb80b6f5a3986d.png" alt="image"></p>
+        <p><img src="http://ww4.sinaimg.cn/mw690/7c2c72d3gw1f2ojtjgebvj21kw0fsjsw.jpg" alt="image"></p>
 <h1 id="SessionFactory__u2013__u7528_u6765_u4EA7_u751F_u548C_u7BA1_u7406Session_u7684_u5DE5_u5382_u7C7B"><a href="#SessionFactory__u2013__u7528_u6765_u4EA7_u751F_u548C_u7BA1_u7406Session_u7684_u5DE5_u5382_u7C7B" class="headerlink" title="SessionFactory – 用来产生和管理Session的工厂类"></a>SessionFactory – 用来产生和管理Session的工厂类</h1><p>通常情况下，每个应用只需要一个SessionFactory对象，可以使用单例模式来产生SessionFactory对象。</p>
 <h2 id="SessionFactory_u7684openSession_28_29_u548CgetCurrentSession_28_29_u65B9_u6CD5_u7684_u533A_u522B"><a href="#SessionFactory_u7684openSession_28_29_u548CgetCurrentSession_28_29_u65B9_u6CD5_u7684_u533A_u522B" class="headerlink" title="SessionFactory的openSession()和getCurrentSession()方法的区别"></a>SessionFactory的openSession()和getCurrentSession()方法的区别</h2><p>获得sessionFactory:<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">SessionFactory sessionFactory = <span class="keyword">null</span>;</span><br><span class="line">Configuration cfg = <span class="keyword">new</span> Configuration().configure();</span><br><span class="line">sessionFactory = cfg.buildSessionFactory(<span class="keyword">new</span> StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build());</span><br></pre></td></tr></table></figure></p>
       
@@ -485,7 +557,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://i3.tietuku.com/f4fb80b6f5a3986d.png" alt="image"></p>
+        <p><img src="http://ww4.sinaimg.cn/mw690/7c2c72d3gw1f2ojtjgebvj21kw0fsjsw.jpg" alt="image"></p>
 <h1 id="1+N_u95EE_u9898_u4E5F_u53EF_u4EE5_u53EBN+1_u95EE_u9898_uFF0C_u4EC0_u4E48_u662F1+N_u95EE_u9898_u5462_uFF1F"><a href="#1+N_u95EE_u9898_u4E5F_u53EF_u4EE5_u53EBN+1_u95EE_u9898_uFF0C_u4EC0_u4E48_u662F1+N_u95EE_u9898_u5462_uFF1F" class="headerlink" title="1+N问题也可以叫N+1问题，什么是1+N问题呢？"></a>1+N问题也可以叫N+1问题，什么是1+N问题呢？</h1><p>如果在一个对象里关联另一个对象，并且fetch = FetchType.EAGER(ManyToOne的默认fetch为EAGER，OneToMany的默认fetch为LAZY)<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="annotation">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mag</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">	<span class="annotation">@ManyToOne</span></span><br><span class="line">	<span class="annotation">@JoinColumn</span>(name=<span class="string">"topicId"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> Topic <span class="title">getTopic</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> topic;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTopic</span><span class="params">(Topic topic)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.topic = topic;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
       
     </div>
